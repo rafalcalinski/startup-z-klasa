@@ -8,7 +8,7 @@ public class Start : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("main");
     }
 
 }
