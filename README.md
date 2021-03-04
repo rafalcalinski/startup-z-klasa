@@ -1,1 +1,1 @@
-# startup-z-klasa
+# startup-z-klasa.
