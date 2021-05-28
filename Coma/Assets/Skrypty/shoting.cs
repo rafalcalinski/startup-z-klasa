@@ -8,16 +8,25 @@ public class shoting : MonoBehaviour
     public Transform Point;
     public GameObject bulletPrefab;
     public GameObject bullet2Prefab;
+    private float period = 0.0f;
+    public float shootSpeed;
 
     public float bulletForce = 20f;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Fire1"))
+        if (period > shootSpeed * 0.1)
+     {
+         if(Input.GetButton("Fire1"))
         {
             Shoot();
         }
+         period = 0;
+     }
+     period += UnityEngine.Time.deltaTime;
+        
+        
         if(Input.GetButton("Fire2"))
         {
             Shoot2();

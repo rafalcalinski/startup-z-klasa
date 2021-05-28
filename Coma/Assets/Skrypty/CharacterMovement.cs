@@ -10,6 +10,12 @@ public class CharacterMovement : MonoBehaviour
     Rigidbody2D rb;
     public Camera cam;
 
+    //health
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     Vector2 mousePos;
 
 
@@ -17,6 +23,18 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag != "bullet")
+        {
+            currentHealth -= 1;
+            healthBar.SetMaxHealth(currentHealth);
+        }
+        
     }
 
     // Update is called once per frame
