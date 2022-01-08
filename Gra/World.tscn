@@ -8,5 +8,17 @@
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 192, 64 )
 
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+current = true
+
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 120, 72 )
+position = Vector2( 144, 96 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 304, 24 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 184, 96 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 264, 24 )
